@@ -8,10 +8,10 @@
 ### Ruben Dario Echeverria Cruz
 ### Johan Andres Cabezas
 
-## Slogan
+##                         Slogan
 ### Un cambio de imagen para tu vida personal es un cambio de imagen para tu vida
 
-## Objetivo General
+##                    Objetivo General
 ### Simular un sitio web que establezca un control de inventarios para el negocio Naila ´ s Beauty, facilitando la información necesaria de cadaproducto a los clientes, optimizando las ventas y alcanzando una mejora en la calidad deservicio
 
 

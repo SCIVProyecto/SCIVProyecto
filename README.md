@@ -1,5 +1,8 @@
-# Proyecto_SCIV
+# SISTEMA CONTROL DE INVENTARIOS Y VENTAS DE LA TIENDA DE BELLEZA NAILA´S BEAUTY
 ## Integrantes:
-### Andres Joya
+### Michael Andres Joya Suarez
+### Naila Yiset Osorio Figueroa
+### Ruben Dario Echeverria Cruz
+### Johan Andres Cabezas
 
 ![image](./Archivos%20staticos/Logo.png)

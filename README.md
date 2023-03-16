@@ -30,7 +30,13 @@
 ## Alcance
 ### Se pretende un control de inventarios y ventas en el negocio Naila ´ s Beauty permitiendo al administrador llevar de manera fácil y rápida el control de los datos en tiempo real. El cliente tendrá la oportunidad de validar información, especificaciones y todo lo necesario para la compra de los productos, de esta manera se optimizará los tiempos de entrega además de realizar una compra segura por medio de un consecutivo.
 
-## Justificación
+<br>
+<br>
+<center>JUSTIFICACIÓN</center>
+
 ### Este software ayudara a tener un mayor control sobre los productos, clientes, ventas y tiempos de entrega en el negocio Naila´s Beauty con la ayuda de los datos precargados los compradores podrán realizar su pedido con facilidad, efectividad, seguridad y sin contratiempos por medio del sitio web.
 
-## GRACIAS
+<br>
+<br>
+
+<center>GRACIAS</center>

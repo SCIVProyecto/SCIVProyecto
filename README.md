@@ -35,4 +35,4 @@
 ### Este software ayudara a tener un mayor control sobre los productos, clientes, ventas y tiempos de entrega en el negocio Naila´s Beauty con la ayuda de los datos precargados los compradores podrán realizar su pedido con facilidad, efectividad, seguridad y sin contratiempos por medio del sitio web.
 
 
-## <center> GRACIAS. </center>
+<center> GRACIAS. </center>

@@ -28,7 +28,7 @@
 ### ¿De qué manera influye la falta de inventario en la respuesta a los clientes y las demoras en la entrega de los productos?
 
 ## ALCANCE
-### Se pretende un control de inventarios y ventas en el negocio Naila ´ s Beauty permitiendo al administrador llevar de manera fácil y rápida el control de los datos en tiempo real. El cliente tendrá la oportunidad de validar información, especificaciones y todo lo necesario para la compra de los productos, de esta manera se optimizará los tiempos de entrega además de realizar una compra segura por medio de un consecutivo.
+### Se pretende un control de inventarios y ventas en el negocio Naila´s Beauty permitiendo al administrador llevar de manera fácil y rápida el control de los datos en tiempo real. El cliente tendrá la oportunidad de validar información, especificaciones y todo lo necesario para la compra de los productos, de esta manera se optimizará los tiempos de entrega además de realizar una compra segura por medio de un consecutivo.
 
 
 ## JUSTIFICACIÓN

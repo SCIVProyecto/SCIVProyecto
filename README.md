@@ -39,7 +39,11 @@
 
 <style>
 div {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
-
 </style>
+
+<div>
+  <img src="./Archivos%20staticos/Logo.png" alt="SCIV">
+</div>

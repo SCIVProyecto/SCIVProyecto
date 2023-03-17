@@ -40,11 +40,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centrar Texto</title>
+    <title>Centrar</title>
 </head>
 <body>
 
-<center>GRACIAS.</center>
+<title>GRACIAS.</title>
 
 </body>
 </html>

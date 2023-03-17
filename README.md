@@ -37,13 +37,9 @@
 ## <center>GRACIAS.</center>
 
 
-
 <style>
 div {
   text-align: center;
 }
-</style>
 
-<div>
-# GRACIAS X2
-</div>
+</style>

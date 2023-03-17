@@ -1,6 +1,9 @@
 # SISTEMA CONTROL DE INVENTARIOS Y VENTAS DE LA TIENDA DE BELLEZA NAILA´S BEAUTY (SCIV)
+<center>
 
 ![image](./Archivos%20staticos/Logo.png)
+
+</center>
 
 ## INTEGRANTES:
 ### Michael Andres Joya Suarez

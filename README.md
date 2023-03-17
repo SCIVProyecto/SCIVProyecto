@@ -34,17 +34,4 @@
 ## JUSTIFICACIÓN
 ### Este software ayudara a tener un mayor control sobre los productos, clientes, ventas y tiempos de entrega en el negocio Naila´s Beauty con la ayuda de los datos precargados los compradores podrán realizar su pedido con facilidad, efectividad, seguridad y sin contratiempos por medio del sitio web.
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centrar</title>
-</head>
-<body>
-
-<title>GRACIAS.</title>
-
-</body>
-</html>
+## <center>GRACIAS.</center>

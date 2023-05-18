@@ -9,7 +9,6 @@
 ### Michael Andres Joya Suarez
 ### Naila Yiset Osorio Figueroa
 ### Ruben Dario Echeverria Cruz
-### Johan Andres Cabezas
 
 ## SLOGAN
 ### Un cambio de imagen para tu personalidad. Es un cambio de imagen para tu vida

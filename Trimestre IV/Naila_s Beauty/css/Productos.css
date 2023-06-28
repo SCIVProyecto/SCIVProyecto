@@ -1,0 +1,334 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #a6cecf;
+  color: #02040a;
+  font-family: "Montserrat", sans-serif;
+}
+
+.barra {
+  background: #ff6f61;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0;
+}
+
+.dropdown-menu {
+  margin: 17px;
+  background: #262a34;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.menuperfil {
+  color: white;
+}
+
+
+.menuperfil:focus {
+  background: #dd8a0d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.cerrar:hover {
+  background-color: rgba(206, 65, 22, 0.877);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.user {
+  font-size: 35px;
+}
+
+/*Tabla*/
+
+ .ofertas {
+   width: 100%;
+   padding: 20px;
+   display: block;
+}
+
+ul.container_ofertas {
+   display: flex;
+   justify-content: center;
+   gap: 30%;
+}
+
+ul.container_ofertas li {
+  padding: 10px;
+  border: 1px solid rgb(21, 21, 22);
+  border-radius: 3px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h2 {
+  color: aliceblue;
+  background: block;
+  background: transparent;
+}
+
+.header { 
+  margin: auto;
+  width: 100%;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+.nav li a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.nav li a:hover {
+  background-color: rgb(196, 199, 255);
+}
+
+.nav > li {
+  float: left;
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.nav li:hover > ul {
+  display: block;
+}
+
+.ofertas li a {
+color: brown;
+text-decoration: none;
+}
+
+/*BARRA LATERAL*/
+
+.barra-lateral {
+  background: #252121;
+  color: #fff;
+  min-width: 250px;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.barra-lateral a {
+  color: #fff;
+}
+
+
+/*ESTILOS MENU*/
+
+.barra-lateral .menu a {
+  display: block;
+  padding: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.barra-lateral .menu a:hover {
+  background-color: #003C5D;
+  text-decoration: none;
+}
+
+.active {
+  background: #003C5D;
+}
+
+.barra-lateral .menu {
+  border-top: 5px #fff solid;
+}
+
+.barra-lateral .menu a i {
+  margin-right: 20px;
+}
+
+
+/*MAIN*/
+
+.main {
+  padding-top: 40px;
+}
+
+.main .columna {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+/*mediaquerys*/
+
+@media screen and (max-width:1300px) {
+  .barra-lateral {
+      min-width: auto;
+  }
+  .barra-lateral .menu a span {
+      display: none;
+  }
+  .barra-lateral .menu a i {
+      margin: 0;
+  }
+  .barra {
+      min-width: auto;
+  }
+  .dropdown-menu {
+      margin: 20px -79px 0px;
+  }
+}
+
+@media screen and (max-width:575px) {
+  .barra-lateral {
+      min-height: auto;
+  }
+  .barra-lateral .menu a {
+      display: inline-block;
+      border-bottom: none;
+  }
+  .dropdown-menu {
+      margin: 20px -78px 0px;
+  }
+  .logocppe {
+      width: 100%;
+  }
+  body {
+      background: #D3D3D3;
+      font-size: 16px;
+      overflow: visible;
+  }
+}
+
+.formulariorecursos {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.568);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.menu {
+  border-top: 5px #fff solid;
+}
+
+@media screen and (max-width:575px) {
+  .barra-lateral {
+      height: auto;
+  }
+  .barra-lateral.menu a {
+      display: inline-block;
+      border-bottom: none;
+  }
+  .dropdown-menu {
+      margin: 20px -78 0px;
+  }
+  body {
+      font-size: 16px;
+      overflow: visible;
+  }
+}
+
+
+/*Inventario*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header a{
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
+    color: #00438D;
+    padding: 0 10px; 
+    height: inherit; 
+    display: flex;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.logo img{
+    margin: 0px 0px 0px 5px ;
+    display: flex;
+    padding: 0;
+    border: 0;
+}
+.header ol{
+    list-style: none; 
+    display: flex; /*Sirve para poner la lista de elementos de la lista horizontalmente*/ 
+    height: inherit;
+}
+.header ol li{
+    height: inherit;
+}
+.link:hover {
+    color: white;
+    background-color: #121314;
+    border: 0.5px solid #D5D9D9;
+}
+ol{
+    margin: 0;
+    padding: 0;
+}
+/*menu*/
+.menu{
+    height: inherit;
+}
+.menu li{
+    display: inline; /*para poner la lista en horizontal*/
+}
+
+/*End Footer*/
+form{
+    text-align: center;
+}
+.tablita{
+    display: inline-block;    
+}
+/*Tablaaaaaa Estilos*/
+.tabla{
+border-collapse: collapse; /*Esta propiedad hace que parezca mas una tabla*/
+font-family: 'Quicksand', sans-serif;
+}
+table tr th{
+    border: 1px solid #d9d5d8;
+    width: 100px;
+    height: 25px;
+    color: white;
+    background-color: #121314;
+}
+/* Para el estilo de las nuevas celdas */
+td {
+    border: 1px solid black;
+    width: 100px;
+    height: 25px;
+}
+.caja{
+    display: block;
+}
+.caja label{
+    font-family: 'Quicksand', sans-serif;
+}
+.caja input{
+    width: 8em;
+    height: 2em;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;  
+}
+.submit{
+    width: 8em;
+    height: 2em;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background-color: #121314;
+    border: 2px solid white;
+}

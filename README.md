@@ -7,10 +7,8 @@
 
 ## INTEGRANTES:
 ### Michael Andres Joya Suarez
-### Naila Yiset Osorio Figueroa
 ### Ruben Dario Echeverria Cruz
 ### Thomas Felipe Garnica Sierra
-### Gary Santiago Leon Baron
 
 ## SLOGAN
 ### Un cambio de imagen para tu personalidad. Es un cambio de imagen para tu vida

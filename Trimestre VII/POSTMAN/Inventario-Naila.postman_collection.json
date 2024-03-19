@@ -1,0 +1,1084 @@
+{
+	"info": {
+		"_postman_id": "dcd3f2e3-731d-4c56-b320-742b7b8690b3",
+		"name": "Inventario-Naila",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30608476",
+		"_collection_link": "https://restless-equinox-238920.postman.co/workspace/My-Workspace~ec8f13ec-3136-4591-8d50-f869380a1359/collection/30608476-dcd3f2e3-731d-4c56-b320-742b7b8690b3?action=share&source=collection_link&creator=30608476"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login_usuario\":\"Administrador\",\r\n    \"login_clave\":\"Administrador\"\r\n}"
+						},
+						"url": {
+							"raw": "{{urlBase}}/auth/login",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "### Auth Login\n\nEste punto final se utiliza para autenticar e iniciar sesión en un usuario.\n\n#### Request Body\n\n- `login_usuario` (text, required): Nombre usuario\n- `login_clave` (text, required): Contraseña\n    \n\n#### Response"
+					},
+					"response": []
+				},
+				{
+					"name": "New",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Au",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario_nombre\":\"ojmgfdfgd fdffd\",\r\n    \"usuario_apellido\":\"edddssdd\",\r\n    \"usuario_usuario\":\"ojmg693432\",\r\n    \"usuario_email\":\"oj364@gmail3.com\",\r\n    \"usuario_clave_1\":\"1333333333\",\r\n    \"usuario_clave_2\":\"1333333333\"\r\n}"
+						},
+						"url": {
+							"raw": "{{urlBase}}/user/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						},
+						"description": "El punto final POST /user/ se utiliza para crear un nuevo usuario. La solicitud debe incluir una carga útil JSON en el tipo de cuerpo de solicitud sin formato con los siguientes parámetros:\n\n- `usuario_nombre` (string): NOmbre\n    \n- `usuario_apellido` (string): Apellidos\n    \n- `usuario_usuario` (string): Usuario\n    \n- `usuario_email` (string): Email\n    \n- `usuario_clave_1` (string): Contraseña\n    \n- `usuario_clave_2` (string): Confirmar contraseña\n    \n\n``` json\n{\n    \"status\": \"\",\n    \"message\": \"\",\n    \"data\": []\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"12\",\r\n    \"usuario_nombre\":\"ojmgfdfgd fdffd\",\r\n    \"usuario_apellido\":\"edddssdd\",\r\n    \"usuario_usuario\":\"ojmg693421\",\r\n    \"usuario_email\":\"oj364@gmail3.com\",\r\n    \"usuario_clave_1\":\"sd\",\r\n    \"usuario_clave_2\":\"d\"\r\n}"
+						},
+						"url": {
+							"raw": "{{urlBase}}/user/update/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"user",
+								"update",
+								""
+							]
+						},
+						"description": "Esta solicitud HTTP PATCH se utiliza para actualizar la información del usuario en el punto final especificado. La solicitud debe incluir el ID del usuario, nombre, apellido, nombre de usuario, correo electrónico y contraseña para la actualización.\n\n### Request Body\n\n- `id` (string): El ID del usuario que se actualizará.\n- `usuario_nombre` (string): El nombre actualizado del usuario.\n- `usuario_apellido` (string): El apellido actualizado del usuario.\n- `usuario_usuario` (string): El nombre de usuario actualizado del usuario.\n- `usuario_email` (string): El correo electrónico actualizado del usuario.\n- `usuario_clave_1` (string): La contraseña actualizada del usuario.\n- `usuario_clave_2` (string): La confirmación de la contraseña actualizada.\n    \n\n### Response\n\n- `status` (string): El estado de la respuesta.\n    \n- `message` (string): Un mensaje sobre el estado de la respuesta.\n    \n- `data` (array): Una matriz de datos relacionados con la operación de actualización.\n    \n\nExample:\n\n``` json\n{\n    \"status\": \"\",\n    \"message\": \"\",\n    \"data\": []\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/user/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar datos del usuario del servidor. La solicitud no incluye un cuerpo de solicitud.\n\n### Response\n\n- Status: 200\n- La respuesta incluye una matriz de datos de usuario, donde cada objeto contiene los siguientes campos:\n    \n    - id (number): Id del usuario\n        \n    - nombre (string): El nombre del usuario\n        \n    - apellido (string): El apellido del usuario\n        \n    - usuario (string): El nombre de usuario del usuario\n        \n    - email (string): la dirección de correo electrónico del usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/user/7/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"user",
+								"7",
+								""
+							]
+						},
+						"description": "Este punto final de API realiza una solicitud HTTP GET para recuperar información del usuario con el ID especificado. La solicitud debe enviarse a\n\n{{urlBase}}/user/7/.\n\nNo hay parámetros de solicitud ni cuerpo para esta solicitud.\n\n### Response\n\n- Status: 200\n- Body:\n    \n    ``` json\n      {\n          \"status\": \"\",\n          \"message\": \"\",\n          \"data\": [\n              {\n                  \"id\": 0,\n                  \"nombre\": \"\",\n                  \"apellido\": \"\",\n                  \"usuario\": \"\",\n                  \"email\": \"\"\n              }\n          ]\n      }\n    \n     ```\n    \n\n```\nLa respuesta devuelve un código de estado de 200 junto con una serie de datos del usuario. Cada objeto de usuario incluye una identificación, nombre, apellido, nombre de usuario y correo electrónico.\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/user/search/?query=jimmy",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"user",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "jimmy"
+								}
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para buscar un usuario según la información proporcionada query parameter.\n\nEl parámetro de consulta \"jimmy\" se utiliza para buscar un usuario cuyo nombre o nombre de usuario contenga \"jimmy\".  \nLa solicitud no contiene un cuerpo de solicitud.\n\n### Response\n\n- Status: 200\n- Body:\n    \n    ``` json\n      {\n        \"status\": \"\",\n        \"message\": \"\",\n        \"data\": [\n          {\n            \"id\": 0,\n            \"nombre\": \"\",\n            \"apellido\": \"\",\n            \"usuario\": \"\",\n            \"email\": \"\"\n          }\n        ]\n      }\n    \n     ```\n    \n\n```\nThe response returns a status code of 200 along with an empty \"data\" array containing user information such as id, name, username, and email. The \"status\" and \"message\" fields are empty.\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario_id\":\"10\"\r\n}"
+						},
+						"url": {
+							"raw": "{{urlBase}}/user/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						},
+						"description": "Este punto final se utiliza para eliminar un usuario. Al realizar una solicitud DELETE a`{{urlBase}}/user/`,\n\nincluya el usuario_id en el cuerpo de la solicitud para especificar el usuario que se eliminará.\n\n### Request Body\n\n- usuario_id (string, required): el ID del usuario que se va a eliminar.\n    \n\n### Response\n\n- Status: 200\n    \n- status (string): el estado de la respuesta.\n- message (string): un mensaje sobre la respuesta.\n- data (array): una matriz de datos relacionados con la respuesta."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "New",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Categoria 28\",\r\n    \"ubicacion\":\"Ubica25433\"\r\n}"
+						},
+						"url": {
+							"raw": "{{urlBase}}/category/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"category",
+								""
+							]
+						},
+						"description": "Este punto final le permite crear una nueva categoría mediante una solicitud HTTP POST para {{urlBase}}/category/.\n\n### Request Body\n\n- `nombre`: (string) Nombre de la categoria\n- `ubicacion`: (string) Ubicacion de la categoria\n    \n\n### Response\n\n- Status: 200\n- status (string): el estado de la respuesta.\n- message (string): un mensaje sobre la respuesta.\n- data (array): una matriz de datos relacionados con la respuesta."
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":28,\r\n    \"nombre\":\"categoria prueba22\",\r\n    \"ubicacion\":\"prueba\"\r\n}"
+						},
+						"url": {
+							"raw": "{{urlBase}}/category/update/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"category",
+								"update",
+								""
+							]
+						},
+						"description": "This endpoint allows you to update a category using an HTTP PATCH request to {{urlBase}}/category/update/.\n\n### Request Body\n\n- The request should include a JSON payload with the following parameters:\n    \n    - `id` (number): Id de la categoria\n        \n    - `nombre` (string): Nombre de la categoria\n        \n    - `ubicacion` (string): ubicacion de la categoria\n        \n\n### Response\n\nTras una actualización exitosa, el punto final devuelve un código de estado de 200 junto con una respuesta JSON que contiene los siguientes campos:\n\n- `status` (string): el estado de la operación de actualización.\n    \n- `message` (string): un mensaje sobre la operación de actualización.\n    \n- `data` (array): una matriz que contiene los detalles de la categoría actualizados, incluido el ID, el nombre y la ubicación."
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/category/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"category",
+								""
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar una lista de categorías. La solicitud no requiere un cuerpo de solicitud. La respuesta tendrá un código de estado de 200 y el cuerpo incluirá una serie de objetos de categoría, cada uno de los cuales contendrá una identificación, un nombre y una ubicación."
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/category/14",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"category",
+								"14"
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar los detalles de una categoría específica con el ID 14.\n\n### Response\n\n- Estado: 200  \n    El cuerpo de la respuesta contiene una serie de datos de categoría, incluido el ID de la categoría, el nombre y la ubicación.Cuerpo de respuesta de ejemplo:\n    \n\n``` json\n{\n    \"status\": \"\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": 0,\n            \"nombre\": \"\",\n            \"ubicacion\": \"\"\n        }\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/category/search/?query=prueba",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"category",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "prueba"
+								}
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar categorías según el parámetro de consulta proporcionado. La solicitud debe hacerse a {{urlBase}}/category/search/\n\ncon el parámetro de consulta \"consulta\" establecido en el término de búsqueda deseado.  \nLa respuesta a la última llamada tenía un código de estado de 200 e incluía un objeto JSON con una matriz de \"datos\" que contenía información de categoría. Cada objeto de categoría en la matriz \"datos\" incluye un campo \"id\", \"nombre\" y \"ubicación\"."
+					},
+					"response": []
+				},
+				{
+					"name": "Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/category/products/?category_id=17",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"category",
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "17"
+								}
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar productos que pertenecen a una categoría específica. La solicitud debe incluir el parámetro Category_id en la cadena de consulta para especificar la categoría para la cual se obtienen los productos.  \nNo se requiere ningún cuerpo de solicitud para esta solicitud.\n\n### Response\n\n- Status: 200\n- La respuesta incluirá una serie de objetos de producto, cada uno de los cuales contendrá los siguientes campos:\n    - id (numeric): el identificador único del producto.\n    - codigo (string): El código o identificador del producto.\n    - nombre (string): El nombre del producto.\n    - precio (string): El precio del producto.\n    - stock (numeric): La cantidad de stock disponible del producto.\n    - foto (string): La URL o ruta a la foto del producto.\n    - categoria_id (numeric): El identificador único de la categoría a la que pertenece el producto.\n    - categoria_nombre (string): El nombre de la categoría a la que pertenece el producto.\n    - usuario_id (numeric): El identificador único del usuario asociado con el producto.\n    - usuario_nombre (string): El nombre del usuario asociado al producto."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\":28\r\n    \r\n    }"
+						},
+						"url": {
+							"raw": "{{urlBase}}/category/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"category",
+								""
+							]
+						},
+						"description": "Este punto final se utiliza para eliminar una categoría.\n\n### Request\n\nLa solicitud HTTP DELETE debe realizarse a `{{urlBase}}/category/`. The request body should be in raw format and include the following parameter:\n\n- `category_id(integer)`:El ID de la categoría que se va a eliminar.\n    \n\n### Response\n\nTras una ejecución exitosa, el punto final devuelve un código de estado de 200 y un cuerpo de respuesta vacío con la siguiente estructura:\n\n```\n{\n    \"status\": \"\",\n    \"message\": \"\",\n    \"data\": []\n}\n\n ```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "New",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "22344122",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "producto 452",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "11.20",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "501",
+									"type": "text"
+								},
+								{
+									"key": "categoria_id",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "subcategoria_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "usuario_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/Users/Dev/Downloads/echarts.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlBase}}/product/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						},
+						"description": "Este punto final le permite agregar un nuevo producto a la base de datos.\n\n#### Request Body Parameters\n\n- codigo (text): El código del producto.\n- nombre (text): El nombre del producto.\n- precio (text): El precio del producto.\n- stock (text): La cantidad de stock del producto.\n- categoria_id (text): El ID de categoría del producto.\n- subcategoria_id (text): El ID de subcategoría del producto.\n- usuario_id (text): El ID de usuario asociado con el producto.\n- foto (file): El archivo de imagen del producto.\n    \n\n#### Response\n\n- status: El estado de la solicitud.\n- message: Un mensaje relacionado con la solicitud.\n- data: una matriz de datos relacionados con la solicitud.\n    \n\nExample:\n\n``` json\n{\n    \"status\": \"\",\n    \"message\": \"\",\n    \"data\": []\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "codigo",
+									"value": "223",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "producto 6",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "10.20",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "503",
+									"type": "text"
+								},
+								{
+									"key": "categoria_id",
+									"value": "13",
+									"type": "text"
+								},
+								{
+									"key": "subcategoria_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "usuario_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlBase}}/product/update/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"product",
+								"update",
+								""
+							]
+						},
+						"description": "This endpoint allows you to update a product using an HTTP POST request to {{urlBase}}/product/update/. The request should include form-data in the body with the following parameters:\n\n- `id` (text): The ID of the product to be updated.\n- `codigo` (text): The product code.\n- `nombre` (text): The name of the product.\n- `precio` (text): The price of the product.\n- `stock` (text): The stock quantity of the product.\n- `foto` (file): An optional image file for the product.\n- `categoria_id` (text): The ID of the category to which the product belongs.\n- `subcategoria_id` (text): The ID of the subcategory to which the product belongs.\n- `usuario_id` (text): The ID of the user making the update.\n    \n\nLa respuesta a la solicitud tendrá un código de estado de 200 e incluirá los siguientes campos:\n\n- status: El estado de la solicitud.\n    \n- message: Un mensaje relacionado con la solicitud.\n    \n- data: una matriz de datos relacionados con la solicitud."
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/product/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						},
+						"description": "Este punto final recupera una lista de productos.\n\n### Response\n\n- Status: 200\n- Body:\n    \n    ``` json\n    {\n        \"status\": \"\",\n        \"message\": \"\",\n        \"data\": [\n            {\n                \"id\": 0,\n                \"codigo\": \"\",\n                \"nombre\": \"\",\n                \"precio\": \"\",\n                \"stock\": 0,\n                \"foto\": \"\",\n                \"categoria_id\": 0,\n                \"categoria_nombre\": \"\",\n                \"subcategoria_id\": 0,\n                \"subcategoria_nombre\": \"\",\n                \"usuario_id\": 0,\n                \"usuario_nombre\": \"\"\n            }\n        ]\n    }\n    \n     ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/product/6",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"product",
+								"6"
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar detalles de un producto específico con el ID 6. La solicitud no contiene un cuerpo de solicitud.\n\n### Response\n\n- Estado: 200  \n    El cuerpo de la respuesta contiene una serie de detalles del producto, incluido el ID del producto, el código, el nombre, el precio, el stock, la fotografía, el ID y el nombre de la categoría, el ID y el nombre de la subcategoría, el ID del usuario y el nombre de usuario."
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/product/search/?query=Labiales",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"product",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Labiales"
+								}
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para buscar productos según el parámetro de consulta proporcionado. El parámetro de consulta debe incluirse en la URL como \"consulta\".  \nLa respuesta a esta solicitud tendrá un código de estado de 200, junto con un objeto JSON que contiene una matriz de datos del producto. Cada producto del array tendrá un 'id', 'codigo', 'nombre', 'precio', 'stock', 'foto', 'categoria_id', 'categoria_nombre', 'subcategoria_id', 'subcategoria_nombre', 'usuario_id ', y campo 'usuario_nombre'.  \nLa última convocatoria a esta solicitud no incluía un cuerpo de solicitud."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\":6\r\n    \r\n    }"
+						},
+						"url": {
+							"raw": "{{urlBase}}/product/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						},
+						"description": "Este punto final se utiliza para eliminar un producto.\n\n#### Request\n\n- Method: DELETE\n- Endpoint: `{{urlBase}}/product/`\n- Body (raw, application/json):\n    \n    ``` json\n        {\n            \"product_id\": 0\n        }\n    \n     ```\n    \n\n#### Response\n\n- Status: 200\n- Body:\n    \n    ``` json\n        {\n            \"status\": \"\",\n            \"message\": \"\",\n            \"data\": []\n        }\n    \n     ```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SubCategory",
+			"item": [
+				{
+					"name": "New",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Esmalte1223\",\r\n    \"ubicacion\":\"Ubica2543323\",\r\n    \"categoria_id\":19\r\n}"
+						},
+						"url": {
+							"raw": "{{urlBase}}/subcategory/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"subcategory",
+								""
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP POST para crear una nueva subcategoría.\n\n#### Request Body\n\n- `nombre` (string, required): El nombre de la subcategoría.\n- `ubicacion` (string, required): La ubicación de la subcategoría.\n- `categoria_id` (integer, required): El ID de la categoría a la que pertenece la subcategoría.\n    \n\n#### Response\n\nTras una solicitud exitosa, el servidor devuelve un código de estado de 200 y una respuesta JSON con los siguientes campos:\n\n- status (string): el estado de la respuesta.  \n    message (string): un mensaje relacionado con la respuesta.  \n    data (array): una matriz que contiene los detalles de la subcategoría recién creada, incluido su id, nombre, ubicación y categoria_id."
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":11,\r\n    \"nombre\":\"prueba14551444\",\r\n    \"ubicacion\":\"caert25443\",\r\n    \"categoria_id\":13\r\n}"
+						},
+						"url": {
+							"raw": "{{urlBase}}/subcategory/update/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"subcategory",
+								"update",
+								""
+							]
+						},
+						"description": "Este punto final se utiliza para actualizar una subcategoría mediante una solicitud HTTP PATCH para {{urlBase}}/subcategory/update/.\n\n### Request Body\n\n- id (integer): el ID de la subcategoría que se actualizará.\n- nombre (string): El nombre actualizado de la subcategoría.\n- ubicacion (string): La ubicación actualizada de la subcategoría.\n- categoria_id (integer): el ID de categoría actualizado al que pertenece la subcategoría.\n    \n\n### Response\n\n- status (string): el estado de la respuesta.\n- message (string): un mensaje sobre la operación de actualización.\n- data (array): una matriz que contiene los detalles actualizados de la subcategoría, incluido el ID, el nombre, la ubicación y el ID de la categoría.\n    \n\nExample:\n\n``` json\n{\n    \"status\": \"\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": 0,\n            \"nombre\": \"\",\n            \"ubicacion\": \"\",\n            \"categoria_id\": 0\n        }\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/subcategory/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"subcategory",
+								""
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar una lista de subcategorías. La solicitud no requiere un cuerpo de solicitud.  \nLa respuesta a la última llamada tenía un código de estado de 200 e incluía un objeto JSON con una matriz de data de subcategoría. Cada objeto de subcategoría en la matriz \"data\" contiene un campo \"id\", \"nombre\", \"ubicacion\" y \"categoria_id\".  \nLos campos \"status\" y \"message\" de la respuesta están vacíos.\n\nPara utilizar este punto final, simplemente realice una solicitud HTTP GET a {{urlBase}}/subcategory/."
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/subcategory/7",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"subcategory",
+								"7"
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar los detalles de una subcategoría específica con el ID 17\n\n### Response\n\n- Estado: 200  \n    El cuerpo de la respuesta contiene una serie de datos de categoría, incluido el ID de la subcategoría, el nombre y la ubicación."
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/subcategory/search/?query=ma",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"subcategory",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "ma"
+								}
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar subcategorías basadas en una consulta de búsqueda. El parámetro de consulta debe proporcionarse en la URL para especificar el término de búsqueda. La solicitud no requiere un cuerpo de solicitud.  \nLa respuesta tendrá un código de estado de 200, lo que indica una solicitud exitosa. El cuerpo de la respuesta contendrá un objeto JSON con una matriz de \"datos\", que incluye información de subcategoría como \"id\", \"nombre\" y \"ubicacion\"."
+					},
+					"response": []
+				},
+				{
+					"name": "Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlBase}}/subcategory/products/?subcategory_id=9",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"subcategory",
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "subcategory_id",
+									"value": "9"
+								}
+							]
+						},
+						"description": "Este punto final realiza una solicitud HTTP GET para recuperar productos que pertenecen a una categoría específica. La solicitud debe incluir el parámetro Category_id en la cadena de consulta para especificar la categoría para la cual se obtienen los productos.  \nNo se requiere ningún cuerpo de solicitud para esta solicitud.\n\n### Response\n\n- Status: 200\n    \n- La respuesta incluirá una serie de objetos de producto, cada uno de los cuales contendrá los siguientes campos:\n    \n    - id (numeric): el identificador único del producto.\n        \n    - codigo (string): El código o identificador del producto.\n        \n    - nombre (string): El nombre del producto.\n        \n    - precio (string): El precio del producto.\n        \n    - stock (numeric): La cantidad de stock disponible del producto.\n        \n    - foto (string): La URL o ruta a la foto del producto.\n        \n    - categoria_id (numeric): El identificador único de la categoría a la que pertenece el producto.\n        \n    - categoria_nombre (string): El nombre de la categoría a la que pertenece el producto.\n        \n    - usuario_id (numeric): El identificador único del usuario asociado con el producto.\n        \n    - usuario_nombre (string): El nombre del usuario asociado al producto."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\":10\r\n    \r\n    }"
+						},
+						"url": {
+							"raw": "{{urlBase}}/subcategory/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"subcategory",
+								""
+							]
+						},
+						"description": "Este punto final envía una solicitud HTTP DELETE para eliminar una subcategoría.\n\n### Request\n\nLa solicitud debe incluir la siguiente carga útil en el cuerpo de la solicitud sin formato:\n\n- `category_id`: El ID de la categoría cuya subcategoría debe eliminarse.\n    \n\n### Response\n\nTras una ejecución exitosa, la respuesta tendrá un código de estado de 200 y una matriz de datos vacía."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "urlBase",
+			"value": "https://inventario-naila.test/api"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5NjMyNDAsImV4cCI6MTcwMDk4NDg0MCwiZGF0YSI6eyJJRFRva2VuIjpudWxsfX0.PYwUrFS56nReEU_NIJT6SBKycxad53u_JpWiIMT6Gnw"
+		}
+	]
+}
